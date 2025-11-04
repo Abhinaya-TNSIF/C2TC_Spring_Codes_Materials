@@ -1,0 +1,38 @@
+Dependency Injection (DI) in Spring is a design pattern that deals with how components (beans) get their dependencies. Instead of creating objects within a class, Spring injects them from the outside. This helps achieve loose coupling and makes the system more modular and testable.
+
+# Key Concepts of Dependency Injection:
+
+1. Inversion of Control (IoC): The control of object creation and management is transferred to the Spring container.
+   
+2. Types of DI:
+   - Constructor Injection: Dependencies are provided through the constructor.
+   - Setter Injection: Dependencies are provided through setter methods.
+   - Field Injection: Dependencies are injected directly into fields (via annotations).
+
+3. Benefits:
+   - Loose Coupling: Classes don’t need to create their own dependencies.
+   - Easier Testing: Dependencies can be mocked or replaced easily in unit tests.
+   - Flexibility: Easy to change dependencies without altering the class.
+
+4. How DI Works in Spring:
+   - Spring’s IoC container manages the lifecycle of beans.
+   - Spring uses configuration files (`XML`, `Annotations`) or Java-based configuration to wire dependencies.
+   - Spring injects dependencies at runtime (either via constructor, setter, or field).
+
+5. Common Annotations:
+   - `@Autowired`: Automatically injects the dependency.
+   - `@Inject`: Same as `@Autowired` (from JSR-330).
+   - `@Qualifier`: Used to specify which bean to inject when there are multiple beans of the same type.
+   - `@Component`, `@Service`, `@Repository`, `@Controller`: Used to define beans.
+
+6. Spring Bean Configuration:
+   - XML Configuration: `<bean>` tags in XML files to define beans and dependencies.
+   - Java Configuration: `@Configuration` and `@Bean` annotations to define beans in Java classes.
+
+
+# DI vs. Service Locator:
+- DI: Injects dependencies automatically, leading to better testability and separation of concerns.
+- Service Locator: A pattern where an object queries a central registry to find dependencies, which can make it harder to manage and test. 
+
+# Summary:
+DI is the heart of Spring, allowing developers to manage dependencies efficiently while ensuring loose coupling, easier testing, and better maintainability.

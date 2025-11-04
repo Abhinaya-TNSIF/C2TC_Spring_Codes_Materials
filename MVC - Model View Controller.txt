@@ -1,0 +1,62 @@
+MVC - Model View Controller
+
+DATA BINDING
+
+Types of data binding in angular
+
+* Interpolation TS to HTML (one way)
+* Property Binding TS to HTML (one way) (but shares only the property not data ie. Photo,Styles , Phara)
+* Event Binding Carrying the events Template -> Component (one way)
+* Two way binding Component -> Template
+
+
+
+* Interpolation:
+
+Syntax {{ expression }}
+
+Example: 
+<h1>{{title}}</h1>
+
+
+* Property Binding
+
+Syntax [property]="exp"
+
+Example:
+<img[src]="imageUrl" alt="Angular Logo">
+
+Use case;
+Dynamically binds DOM property Src,URl...
+
+
+* Event Binding
+
+Syntax (event)="exp"
+
+Example:
+
+
+* Two way binding
+
+Syntax [(ngModel)]="property"
+
+Example:
+
+<input[(ngModel)]="name">
+<p>Your name is:{{ name }}</p>
+
+Use Case:
+Forms where the UI needs to reflect the user's input in real time
+
+ngModel is used for forms, if we give name , email in TS we will declare in main so we will
+
+
+
+Once we created a project always put cd Projectname and keep it open
+
+ng serve to run the project
+* we need to have component and routeroulet imported
+* to create a website we need Decoraters (@component)
+
+
